@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CustomerComponent implements OnInit {
   @Input() customer: { id: number, name: string };
 
-  myColour = 'gray';
+  myColour = 'red';
 
   ngOnInit() {  }
 }

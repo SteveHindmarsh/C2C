@@ -5,15 +5,15 @@ import { Observable } from 'rxjs/Rx';
 
 // import 'rxjs/add/operators/map'; // just get map
 
-const URL_CUSTOMER = 'api/customers.json';
+const URL_PROJECT = 'api/projects.json';
 
 @Injectable()
-export class CustomerService {
+export class ProjectService {
   constructor(private _http: Http) { }
 
   // This is Ward's preference, on Wednesdays
-  getCustomers() {
-    return this._http.get(URL_CUSTOMER)
+  getProjects() {
+    return this._http.get(URL_PROJECT)
       .map((response: Response) => response.json())
       .toPromise()
       .catch((err: any) => {
@@ -22,8 +22,8 @@ export class CustomerService {
       });
   }
 
-  getCustomers_RxObservable() {
-    return this._http.get(URL_CUSTOMER)
+  getProjects_RxObservable() {
+    return this._http.get(URL_PROJECT)
       .map((response: Response) => response.json())
       .catch(this._handlerError);
   }

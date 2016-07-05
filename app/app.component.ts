@@ -5,18 +5,19 @@ import { Component } from '@angular/core';
 
 // here is my barrel // future i would just import './customer'
 import { CustomersComponent, CustomerService } from './customer/index';
+import { ProjectsComponent, ProjectService } from './project/index';
 
 @Component({
   moduleId: module.id,
-  selector: 'my-app',
+  selector: 'app-c2c',
   templateUrl: 'app.component.html',
-  directives: [CustomersComponent],
-  providers: [CustomerService]
+  directives: [CustomersComponent,ProjectsComponent],
+  providers: [CustomerService,ProjectService]
 })
 export class AppComponent {
   // [ ] means property binding - C to D
   // ( ) means event binding - D to C
-  title = 'Customer App';
+  title = 'Cost to Complete';
   name = 'Ward';
   wardsColor = 'green';
 
